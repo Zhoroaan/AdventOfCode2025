@@ -5,8 +5,8 @@
 const char* ANSI_BOLD_UNDERLINE ="\033[1m\033[4m";
 const char* ANSI_RESET = "\033[0m";
 
-//std::string Filename = "TestInput.txt";
-std::string Filename = "Input.txt";
+std::string Filename = "TestInput.txt";
+//std::string Filename = "Input.txt";
 
 int32_t WrapTo99(int InCount) {
     return (InCount % 100 + 100) % 100;
@@ -26,14 +26,16 @@ int main(int /*InArgc*/, char* /*InArgv[]*/)
     {
         std::getline(inputFile, inputLine);
         int32_t sign = inputLine[0] == 'L' ? -1 : 1;
-        for (int32_t value = std::atoi(inputLine.c_str() + 1);
-            value > 0; --value)
-        {
-            currentNumber = WrapTo99(currentNumber + sign);
-            
-            if (currentNumber == 0)
-                part2Count++;
-        }
+        int32_t value = std::atoi(inputLine.c_str() + 1);
+        
+        part2Count += value / 100;
+        int32_t wrappedDiff = (value * sign) % 100;
+        const bool isOutsideOfRange = (currentNumber + wrappedDiff <= 0
+            || currentNumber + wrappedDiff > 99);
+        if (currentNumber != 0 && isOutsideOfRange)
+            part2Count++;
+        currentNumber = WrapTo99(currentNumber + sign * value);
+        
         if (currentNumber == 0)
             part1Count++;
     }
