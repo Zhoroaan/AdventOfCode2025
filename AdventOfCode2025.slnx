@@ -4,4 +4,5 @@
     <Platform Name="x64" />
   </Configurations>
   <Project Path="Day01/Day01.vcxproj" />
+  <Project Path="Day02/Day02.vcxproj" />
 </Solution>
