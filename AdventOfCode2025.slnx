@@ -5,4 +5,5 @@
   </Configurations>
   <Project Path="Day01/Day01.vcxproj" />
   <Project Path="Day02/Day02.vcxproj" />
+  <Project Path="Day03/Day03.vcxproj" />
 </Solution>
