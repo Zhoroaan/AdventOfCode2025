@@ -7,4 +7,5 @@
   <Project Path="Day02/Day02.vcxproj" />
   <Project Path="Day03/Day03.vcxproj" />
   <Project Path="Day04/Day04.vcxproj" />
+  <Project Path="Day05/Day05.vcxproj" />
 </Solution>
