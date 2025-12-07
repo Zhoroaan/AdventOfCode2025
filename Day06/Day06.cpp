@@ -95,11 +95,11 @@ int64_t CalculatePart2(const std::vector<std::string>& InAllLines)
     return part2Count;
 }
 
-void Day06(const std::string& InFilname)
+void Day07(const std::string& InFileName)
 {
-    std::printf("Result for %s\n", InFilname.c_str());
+    std::printf("Result for %s\n", InFileName.c_str());
     std::ifstream inputFile;
-    inputFile.open(InFilname);
+    inputFile.open(InFileName);
     std::string inputLine;
     
     int64_t part1Count = 0;
@@ -159,7 +159,7 @@ void Day06(const std::string& InFilname)
 
 int main(int /*InArgc*/, char* /*InArgv[]*/)
 {
-    Day06("TestInput.txt");
-    Day06("Input.txt");
+    Day07("TestInput.txt");
+    Day07("Input.txt");
     return 0;
 }
