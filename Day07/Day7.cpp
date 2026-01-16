@@ -83,7 +83,7 @@ int64_t ProcessPart2(std::vector<std::string>& InVectorm, int x, int y, std::map
     return result;
 }
 
-void Day07(const std::string& InFileName, const int64_t InPart1Expected, const int64_t InPart2Expected)
+void Day12(const std::string& InFileName, const int64_t InPart1Expected, const int64_t InPart2Expected)
 {
     std::printf("Result for %s\n", InFileName.c_str());
     std::ifstream inputFile;
@@ -115,7 +115,7 @@ void Day07(const std::string& InFileName, const int64_t InPart1Expected, const i
 
 int main(int /*InArgc*/, char* /*InArgv[]*/)
 {
-    Day07("TestInput.txt", 21,40);
-    Day07("Input.txt", 1594, 15650261281478);
+    Day12("TestInput.txt", 21,40);
+    Day12("Input.txt", 1594, 15650261281478);
     return 0;
 }
